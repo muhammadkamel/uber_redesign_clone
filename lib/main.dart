@@ -1,11 +1,19 @@
 import 'dart:collection';
 
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
 
 import 'pages/home.dart';
 
 void main() {
+  // SystemChrome.setSystemUIOverlayStyle(
+  //   SystemUiOverlayStyle(
+  //     statusBarColor: Colors.transparent,
+  //     statusBarIconBrightness: Brightness.dark,
+  //     systemNavigationBarColor: Colors.orange,
+  //   ),
+  // );
   runApp(MyApp());
 }
 
@@ -33,7 +41,16 @@ class _MyAppState extends State<MyApp> {
 
   @override
   Widget build(BuildContext context) {
+    SystemChrome.setSystemUIOverlayStyle(
+        SystemUiOverlayStyle(statusBarColor: Colors.transparent
+            //color set to transperent or set your own color
+            ));
     return MaterialApp(
+      theme: ThemeData(
+        fontFamily: 'Montserrat',
+        // backgroundColor: Colors.pink,
+        // brightness: Brightness.dark,
+      ),
       debugShowCheckedModeBanner: false,
       home: Home(),
       // home: Scaffold(
