@@ -84,7 +84,7 @@ class _SearchRideState extends State<SearchRide> {
               DraggableScrollableSheet(
                 initialChildSize: 0.81,
                 maxChildSize: 1.0,
-                minChildSize: 0.5,
+                minChildSize: 0.20,
                 builder: (context, scrollController) {
                   if (scrollController.hasClients) {
                     var myVal = scrollController.position.viewportDimension;
